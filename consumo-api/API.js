@@ -1,7 +1,10 @@
-const fetch = require('node-fetch');
-
-fetch('https://mystoreapi.com/catalog/categories')
-    .then(respuesta => respuesta.json())
-    .then(data => console.log(data))
-    .catch(error => console.log('Error: ',error));
-//api con js
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = require("axios");
+axios_1.default.get('https://mystoreapi.com/catalog/categories')
+    .then(function (respuesta) {
+    console.log(respuesta.data);
+})
+    .catch(function (error) {
+    console.log('Error en ejecución: ', error);
+});
